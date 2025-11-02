@@ -1,8 +1,11 @@
-class solution:
+class Solution:
     def rotate(self, nums, d):
         n = len(nums)
         d = d % n
         new = []
+
+        if n < 2:
+            return nums
 
         for i in range(0, d):
             new.append(nums[n - d + i])
